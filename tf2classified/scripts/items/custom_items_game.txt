@@ -1,0 +1,443 @@
+#base "items_game.txt"
+
+"items_game"
+{
+	"items"
+	{		
+		"20001" // Scout SMG
+		{
+			"name"				"TF_WEAPON_SMG_SCOUT"
+			"item_name"			"#TF_Weapon_SMG"
+			"item_type_name"	"#TF_Weapon_SMG"
+			"item_description"	"#TF_Weapon_SMG_Desc"
+			"item_quality"		"normal"
+			"propername"		"0"
+
+			"item_class"		"tf_weapon_smg"
+			"item_slot"			"secondary"
+			"used_by_classes"
+			{
+				"scout"			"1"
+			}
+
+			"model_world"		"models/weapons/w_models/w_smg.mdl"
+			"model_player"		"models/weapons/v_models/v_smg_sniper.mdl"
+			"anim_slot"			"item4"
+			"attach_to_hands"	"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -10"
+				"damage bonus"				"1.5"
+			}
+			"visuals"
+			{
+				"sound_single_shot"			"Weapon_NailGunSMG.Single"
+				"sound_burst"				"Weapon_NailGunSMG.SingleCrit"
+			}
+
+			"image_inventory"		"backpack/weapons/w_models/w_smg"
+		}
+		"8000"
+		{
+			"name"              "TF_SHOTGUN_MEDIC"
+			"item_class"        "tf_weapon_shotgun_primary"
+			"show_in_armory"    "1"
+			"item_type_name"    "#TF_Weapon_Shotgun"
+			"item_name"         "Surgical Scattergun"
+			"item_logname"      "SurgicalScattergun"
+			"item_iconname"     "SurgicalScattergun"
+			"item_description"  "Sometimes the best medicine is twelve pellets to the face.
+		Model by: 'Gadget, Kibbleknight'
+		Animations by: 'Kylul'
+		Weapon by: 'Digivee' and 'lime girl'"
+			"item_slot"         "primary"
+			"item_quality"      "completed"
+			"propername"        "0"
+			"inspect_panel_dist" "40"
+			"image_inventory"   "backpack/weapons/c_models/c_medicshotgun/c_medicshotgun"
+			"model_world"       "models/weapons/w_models/w_syringe_shot.mdl"
+			"model_player"      "models/weapons/v_models/v_medic_shotgun.mdl"
+			"attach_to_hands"   "2"
+			"used_by_classes"
+			{
+				"medic"         "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset" "10 0 -11"
+			}
+			"attributes"
+			{
+				"health drain medic"
+				{
+					"attribute_class" "add_health_regen"
+					"value" "-2"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class" "mult_postfiredelay"
+					"value" "1.25"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Shotgun.Single"
+				"sound_burst"       "Weapon_Shotgun.SingleCrit"
+				"sound_reload"      "Weapon_Shotgun.Reload"
+			}
+			"mouse_pressed_sound"   "ui/item_medium_gun_pickup.wav"
+			"drop_sound"            "ui/item_medium_gun_drop.wav"
+		}
+		"8001"
+		{
+			"name" "The Original"
+			"first_sale_date" "2012/06/27"
+			"item_class" "tf_weapon_rocketlauncher"
+			"propername" "1"
+			"craft_class" "weapon"
+			"craft_material_type" "weapon"
+			"capabilities"
+			{
+				"nameable" "1"
+				"can_craft_count" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage" "1"
+				"can_deal_gib_damage" "1"
+				"can_be_equipped_by_soldier_or_demo" "1"
+				"can_deal_posthumous_damage" "1"
+				"can_deal_critical_damage" "1"
+				"can_deal_long_distance_damage" "1"
+				"can_be_festivized" "1"
+			}
+			"show_in_armory" "1"
+			"item_type_name" "#TF_Weapon_RocketLauncher"
+			"item_name" "#TF_TheOriginal"
+			"item_description" "Fires from the center!"
+			"item_logname" "quake_rl"
+			"item_iconname" "quake_rl"
+			"item_slot" "primary"
+			"item_quality" "unique"
+			"inspect_panel_dist" "68"
+			"image_inventory" "backpack/workshop_partner/weapons/c_models/c_bet_rocketlauncher/c_bet_rocketlauncher"
+			"image_inventory_size_w" "128"
+			"image_inventory_size_h" "82"
+			"model_player" "models/workshop_partner/weapons/c_models/c_bet_rocketlauncher/c_bet_rocketlauncher.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"soldier" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset" "10 0 -5"
+			}
+			"attributes"
+			{
+				"centerfire projectile"
+				{
+					"attribute_class"	"centerfire_projectile"
+					"value"	"1"
+				}
+				"disable fancy class select anim"
+				{
+					"attribute_class"	"disable_fancy_class_select_anim"
+					"value"	"1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class" "custom_projectile_model"
+					"value" "models\weapons\w_models\projectiles\w_rocket_original.mdl"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_VM_DRAW_QRL"
+					"ACT_VM_IDLE"	"ACT_VM_IDLE_QRL"
+					"ACT_VM_PULLBACK"	"ACT_VM_PULLBACK_QRL"
+					"ACT_VM_PRIMARYATTACK"	"ACT_VM_PRIMARYATTACK_QRL"
+					"ACT_VM_RELOAD"	"ACT_VM_RELOAD_QRL"
+					"ACT_RELOAD_START"	"ACT_VM_RELOAD_START_QRL"
+					"ACT_RELOAD_FINISH"	"ACT_VM_RELOAD_FINISH_QRL"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_MP_RELOAD_STAND_PRIMARY3"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_MP_RELOAD_CROUCH_PRIMARY3"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_MP_RELOAD_AIRWALK_PRIMARY3"
+					"ACT_MP_RELOAD_STAND_PRIMARY_LOOP"	"ACT_MP_RELOAD_STAND_PRIMARY3_LOOP"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_LOOP"	"ACT_MP_RELOAD_CROUCH_PRIMARY3_LOOP"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY_LOOP"	"ACT_MP_RELOAD_AIRWALK_PRIMARY3_LOOP"
+					"ACT_MP_RELOAD_STAND_PRIMARY_END"	"ACT_MP_RELOAD_STAND_PRIMARY3_END"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_END"	"ACT_MP_RELOAD_CROUCH_PRIMARY3_END"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY_END"	"ACT_MP_RELOAD_AIRWALK_PRIMARY3_END"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"	"ACT_MP_RELOAD_SWIM_PRIMARY3"
+					"ACT_PRIMARY_VM_INSPECT_START"		"ACT_PRIMARY_ALT1_VM_INSPECT_START"
+					"ACT_PRIMARY_VM_INSPECT_IDLE"		"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
+					"ACT_PRIMARY_VM_INSPECT_END"		"ACT_PRIMARY_ALT1_VM_INSPECT_END"
+				}
+				"sound_single_shot"		"Weapon_QuakeRPG.Single"
+				"sound_burst"			"Weapon_QuakeRPG.SingleCrit"
+				"sound_deploy"			"Weapon_QuakeRPG.Draw"
+				"sound_reload"			"Weapon_QuakeRPG.Reload"
+				"sound_special1"		"Weapon_QuakeRPG.Explode"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model"	"models/workshop_partner/weapons/c_models/c_bet_rocketlauncher/c_bet_rocketlauncher_festivizer.mdl"
+					}
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}		
+		"8002"
+		{
+			"name" "The Classic"
+			"prefab" "valve weapon_sniperrifle_alt1"
+			"first_sale_date" "2014/06/18"
+			"item_class" "tf_weapon_sniperrifle_classic"
+			"craft_class" "weapon"
+			"craft_material_type" "weapon"
+			"capabilities"
+			{
+				"nameable" "1"
+			}
+			"tags"
+			{
+				"can_deal_damage" "1"
+				"can_headshot" "1"
+				"can_deal_mvm_penetration_damage" "1"
+				"can_deal_long_distance_damage" "1"
+				"can_deal_gib_damage" "1"
+				"can_be_festivized" "1"
+			}
+			"item_logname" "the_classic"
+			"item_iconname" "the_classic"
+			"show_in_armory" "1"
+			"item_type_name" "#TF_Weapon_SniperRifle"
+			"item_name" "#TF_ClassicSniperRifle"
+			"item_description" "#TF_ClassicSniperRifle_Desc"
+			"item_slot" "primary"
+			"item_quality" "unique"
+			"propername" "1"
+			"min_ilevel" "1"
+			"max_ilevel" "100"
+			"image_inventory" "backpack/weapons/c_models/c_tfc_sniperrifle/c_tfc_sniperrifle"
+			"image_inventory_size_w" "128"
+			"image_inventory_size_h" "82"
+			"model_player" "models/weapons/c_models/c_tfc_sniperrifle/c_tfc_sniperrifle.mdl"
+			"attach_to_hands" "1"
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_ClassicSniperRifle.Single"
+				"sound_burst" "Weapon_ClassicSniperRifle.SingleCrit"
+				"attached_models_festive"
+				{
+					"0"
+					{
+						"model" "models/weapons/c_models/c_tfc_sniperrifle/c_tfc_sniperrifle_festivizer.mdl"
+					}
+				}
+			}
+			"used_by_classes"
+			{
+				"sniper" "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset" "5 0 -8"
+			}
+			"attributes"
+			{
+				"provide on active"
+				{
+					"attribute_class" "provide_on_active"
+					"value" "1"
+				}
+				"sniper crit no scope"
+				{
+					"attribute_class" "sniper_crit_no_scope"
+					"value" "1"
+				}
+				"heal on kill on crit"
+				{
+					"attribute_class" "heal_on_kill_crit"
+					"value" "75"
+				}
+				"sniper no headshot without full charge"
+				{
+					"attribute_class" "sniper_no_headshot_without_full_charge"
+					"value" "1"
+				}
+				"crit on hard hit"
+				{
+					"attribute_class" "crit_on_hard_hit"
+					"value" "1"
+				}
+				"damage penalty on bodyshot"
+				{
+					"attribute_class" "bodyshot_damage_modify"
+					"value" "0.90"
+				}
+				"sniper fires tracer HIDDEN"
+				{
+					"attribute_class" "sniper_fires_tracer_HIDDEN"
+					"value" "1"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class" "set_weapon_mode"
+					"value" "3"
+				}
+			}
+			"mouse_pressed_sound" "ui/item_heavy_gun_pickup.wav"
+			"drop_sound" "ui/item_heavy_gun_drop.wav"
+		}
+		"8003" //pioneer
+		{
+			"name"              "Trailblazer"
+			"item_name"         "Trailblazer"
+			"item_type_name"    "#TF_Weapon_GrenadeLauncher"
+			"item_description"  "Fires from the center!
+			
+			Model by 'StrangeSentinel' 'Sims_Doc' 'Flpstrike'
+			Weapon by 'Digivee'"
+			"item_quality"      "normal"
+			"item_class"        "tf_weapon_grenadelauncher"
+			"item_slot"         "primary"
+			"propername"        "1"
+			"used_by_classes"
+			{
+				"Demoman"       "1"
+			}
+			"attributes"
+			{
+				"centerfire projectile"
+				{
+					"attribute_class"	"centerfire_projectile"
+					"value"	"1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class" "custom_projectile_model"
+					"value" "models\weapons\w_models\w_qk_grenade.mdl"
+				}
+			}
+			"model_player"      "models/weapons/c_models/c_qk_launcher/c_qk_launcher.mdl"
+			"model_world"       "models/weapons/c_models/c_qk_launcher/c_qk_launcher.mdl"
+			"anim_slot"         "secondary"
+			"attach_to_hands"   "1"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"  "10 0 -10"
+			}
+			"sound_single_shot"		"Weapon_QuakeRPG.Single"
+			"sound_burst"			"Weapon_QuakeRPG.SingleCrit"
+			"sound_deploy"			"Weapon_QuakeRPG.Draw"
+			"sound_reload"			"Weapon_QuakeRPG.Reload"
+			"sound_special1"		"Weapon_QuakeRPG.Explode"
+			"image_inventory"       "backpack/weapons/w_models/w_qkgrenadelauncher"
+			"mouse_pressed_sound"   "ui/item_heavy_gun_pickup.wav"
+			"drop_sound"            "ui/item_heavy_gun_drop.wav"
+		}
+				"8004"
+		{
+			"name"              "Secret_Weapon"
+			"item_class"        "tf_weapon_shotgun"
+			"show_in_armory"    "1"
+			"item_type_name"    "#TF_Weapon_Shotgun"
+			"item_name"         "Secret Weapon"
+			"item_logname"      "SecretWeapon"
+			"item_iconname"     "SecretWeapon"
+			"item_description"  "A Secret is Revealed!
+			Model by: 'Payesh' 'Mayor_rev' 'Extra Ram'
+			Weapon by: 'Digivee'"
+			"item_slot"         "secondary"
+			"item_quality"      "completed"
+			"propername"        "0"
+			"inspect_panel_dist" "40"
+			"image_inventory"   "backpack/weapons/w_models/w_secret_weapon"
+			"model_player"      "models/weapons/c_models/c_secret_weapon/c_secret_weapon.mdl"
+			"model_world"       "models/weapons/c_models/c_secret_weapon/c_secret_weapon.mdl"
+			"attach_to_hands"   "1"
+			"used_by_classes"
+			{
+				"soldier"         "1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset" "10 0 -11"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.5"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class" "mult_postfiredelay"
+					"value" "1.3"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot" "Weapon_Shotgun.Single"
+				"sound_burst"       "Weapon_Shotgun.SingleCrit"
+				"sound_reload"      "Weapon_Shotgun.Reload"
+			}
+			"mouse_pressed_sound"   "ui/item_medium_gun_pickup.wav"
+			"drop_sound"            "ui/item_medium_gun_drop.wav"
+		}
+		"8033" // Slipgate
+		{
+			"name"				"Slipgate Chopper"
+			"item_name"			"Slipgate Chopper"
+			"item_type_name"	"#TF_Weapon_FireAxe"
+			"item_description"	"Model by: 'Swaggernaut64' 'Sims_Doc'
+			Weapon by: 'Digivee' and 'Kaleido'"
+			"item_quality"		"normal"
+
+			"item_class"	"tf_weapon_fireaxe"
+			"item_slot"		"melee"
+			"used_by_classes"
+			{
+				"Pyro"	"1"
+			}
+
+			"model_player"		"models/weapons/c_models/c_chopper/c_chopper.mdl"
+			"model_world"		"models/weapons/c_models/c_chopper/c_chopper.mdl"
+			"attach_to_hands"	"1"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -9"
+				"crit kill will gib"		"1"
+			}
+			"attributes"
+			{
+				"fire rate bonus"
+				{
+					"attribute_class" "mult_postfiredelay"
+					"value" "0.5"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.4"
+				}
+				"crit on hard hit"
+				{
+					"attribute_class" "crit_on_hard_hit"
+					"value" "1"
+				}
+			}
+
+			"image_inventory"		"backpack/weapons/w_models/c_chopper"
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"			"ui/item_metal_weapon_drop.wav"
+		}
+	}
+}
