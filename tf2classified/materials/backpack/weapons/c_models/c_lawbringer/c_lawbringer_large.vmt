@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/weapons/c_models/c_lawbringer/c_lawbringer"
+	"$nocull" 1
+	"$nodecal" 1
+	"$translucent" 1
+}

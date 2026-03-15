@@ -16,3 +16,18 @@
 	"volume"	"1.0"
 	"wave"		")weapons/nail_gun_shoot_crit.wav"
 }
+"Weapon_hl2pistol.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/hl2_pistol_shoot.wav"
+}
+
+"Weapon_hl2pistol.SingleCrit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"	"1.0"
+	"wave"		")weapons/hl2_pistol_shoot_crit.wav"
+}
