@@ -477,11 +477,6 @@
 					"value" "1.15"
 				}
 			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_hl2pistol.Single"
-				"sound_burst"			"Weapon_hl2pistol.SingleCrit"
-			}
 
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"			"ui/item_light_gun_drop.wav"
@@ -502,7 +497,7 @@
 			"item_logname"	"Crowbar"
 			"item_iconname"	"Crowbar"
 			"image_inventory"	"backpack/weapons/w_models/bucket_crowbar_red"
-			"model_player"	"models\weapons\w_models\w_crowbar.mdl"
+			"model_player"	"models\weapons\c_models\c_crowbar.mdl"
 			"anim_slot" "MELEE_ALLCLASS"
 			"used_by_classes"
 			{
