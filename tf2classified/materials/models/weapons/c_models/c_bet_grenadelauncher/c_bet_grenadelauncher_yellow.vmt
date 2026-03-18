@@ -1,0 +1,9 @@
+Patch
+{
+	Include	"materials/models/weapons/c_models/c_bet_grenadelauncher/c_bet_grenadelauncher.vmt"
+	
+	Insert
+	{
+		$basetexture "models/weapons/c_models/c_bet_grenadelauncher/c_bet_grenadelauncher_yellow"
+	}
+}
